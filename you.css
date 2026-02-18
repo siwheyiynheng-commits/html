@@ -1,0 +1,308 @@
+/* ======================
+   RESET + FONT
+====================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    overflow:hidden;
+}
+
+/* Fade ทุกหน้า */
+.fade{
+    animation:fadeIn .8s ease-in-out;
+}
+
+@keyframes fadeIn{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+/* =================================================
+   หน้าแรก (sisi.html)
+================================================= */
+
+.home{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(to right, #d8c6d9 50%, #eeeeee 50%);
+}
+
+.home-container{
+    width:85%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.home-img{
+    width:280px;
+}
+
+.main-btn{
+    text-decoration:none;
+    font-size:65px;
+    font-weight:bold;
+    color:#7a4a91;
+    transition:.3s;
+}
+
+.main-btn:hover{
+    color:#b57edc;
+    transform:scale(1.15);
+}
+
+.main-btn:active{
+    transform:scale(.9);
+}
+
+/* =================================================
+   หน้า Resume (yuen.html)
+================================================= */
+
+.resume{
+    display:flex;
+    height:100vh;
+}
+
+.left{
+    width:50%;
+    background:#d7c8d8;
+    padding:40px;
+    position:relative;
+}
+
+.right{
+    width:50%;
+    background:#f1f1f1;
+    padding:60px;
+    position:relative;
+}
+
+.left h1{
+    font-size:90px;
+    color:#7a4a91;
+    margin-bottom:20px;
+}
+
+.profile-img{
+    width:85%;
+    border-radius:30px;
+    display:block;
+    margin:auto;
+}
+
+.description{
+    text-align:center;
+    color:#6b4b80;
+    font-size:22px;
+    margin-top:30px;
+    line-height:1.6;
+}
+
+.menu{
+    text-align:center;
+    margin-top:80px;
+}
+
+.menu a{
+    display:block;
+    text-decoration:none;
+    color:#e67aa3;
+    font-size:22px;
+    margin:35px 0;
+    transition:.3s;
+    position:relative;
+}
+
+.menu a::after{
+    content:"";
+    display:block;
+    width:65%;
+    height:2px;
+    background:#7a4a91;
+    margin:12px auto 0;
+}
+
+.menu a:hover{
+    color:#7a4a91;
+    transform:scale(1.1);
+}
+
+.menu a:active{
+    transform:scale(.9);
+}
+
+.top-kuromi{
+    position:absolute;
+    right:20px;
+    top:20px;
+    width:120px;
+}
+
+.bottom-kuromi{
+    position:absolute;
+    bottom:20px;
+    left:20px;
+    width:120px;
+}
+
+/* =================================================
+   หน้า Profile Detail (heng.html)
+================================================= */
+
+.profile-detail{
+    background:#d9cddc;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* กรอบใหญ่ */
+.profile-wrapper{
+    width:88%;
+    height:92vh;
+    background:#e8dfd5;
+    border-radius:35px;
+    border:8px solid #4b4b63;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+
+    /* ลายตารางบางๆ */
+    background-image:
+        linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size:40px 40px;
+}
+
+/* แถบบน */
+.top-bar{
+    background:#c792d8;
+    padding:15px;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.title-box{
+    background:#efe6dc;
+    padding:12px 60px;
+    border-radius:20px;
+    font-size:30px;
+    font-weight:bold;
+}
+
+/* ปุ่มย้อนกลับวงกลม */
+.back-btn{
+    position:absolute;
+    left:20px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:22px;
+    color:black;
+    box-shadow:0 4px 8px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.back-btn:hover{
+    transform:scale(1.2);
+}
+
+.back-btn:active{
+    transform:scale(.9);
+}
+
+/* กล่องข้อมูล */
+.info-box{
+    margin-top:50px;
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.row{
+    display:flex;
+    align-items:center;
+    margin:22px 0;
+}
+
+.row span{
+    width:170px;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.data{
+    flex:1;
+    background:white;
+    border-radius:40px;
+    padding:12px 25px;
+    border:2px solid #7a4a91;
+    font-size:20px;
+}
+
+/* รูปโพลารอยด์ */
+.polaroid{
+    width:190px;
+    position:absolute;
+    background:white;
+    padding:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+.left-photo{
+    left:25px;
+    top:110px;
+    transform:rotate(-6deg);
+}
+
+.right-photo{
+    right:25px;
+    top:110px;
+    transform:rotate(6deg);
+}
+
+/* หมุดแดง */
+.polaroid::before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    background:red;
+    border-radius:50%;
+    top:-10px;
+    left:50%;
+    transform:translateX(-50%);
+    box-shadow:0 3px 6px rgba(0,0,0,.4);
+}
+
+/* Kuromi ตกแต่ง */
+.kuromi-left{
+    position:absolute;
+    bottom:15px;
+    left:15px;
+    width:130px;
+}
+
+.kuromi-right{
+    position:absolute;
+    bottom:15px;
+    right:15px;
+    width:130px;
+}
